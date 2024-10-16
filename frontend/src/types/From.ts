@@ -1,0 +1,1 @@
+export type FormInputProps = React.InputHTMLAttributes<HTMLInputElement>;

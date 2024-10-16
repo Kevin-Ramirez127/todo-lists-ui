@@ -1,0 +1,1 @@
+export type InputCheckboxProps = React.InputHTMLAttributes<HTMLInputElement>;
