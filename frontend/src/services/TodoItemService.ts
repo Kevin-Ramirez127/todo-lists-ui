@@ -1,36 +1,5 @@
-// Libraries
-import axios from 'axios';
-
-// Types
-import { TodoItemProps, TodoListProps } from '../types/TodoProps';
-
-const api = axios.create({
-	baseURL: 'http://localhost:4000/api/',
-});
-
-const getAllLists = async (): Promise<TodoListProps[]> => {
-	const lists = await api({
-		method: 'GET',
-		url: '/todo-lists',
-	});
-
-	return lists.data;
-};
-
-const addTodoList = ({ name }: { name: string }) => {
-	return api({
-		method: 'POST',
-		data: { name },
-		url: '/todo-lists/',
-	});
-};
-
-const removeTodoList = ({ id }: { id: number }) => {
-	return api({
-		method: 'DELETE',
-		url: `/todo-lists/${id}`,
-	});
-};
+import { api } from './axios';
+import { TodoItemProps } from '../types/TodoProps';
 
 const addTodo = ({
 	todoListId,
@@ -79,10 +48,7 @@ const removeTodoItem = async ({
 };
 
 export {
-	getAllLists,
 	addTodo,
 	updateTodoItem,
 	removeTodoItem,
-	addTodoList,
-	removeTodoList,
-};
+}

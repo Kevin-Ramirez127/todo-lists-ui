@@ -2,7 +2,7 @@
 import { createContext, useEffect, useState } from 'react';
 
 // Services
-import * as api from '../services/todoListService';
+import * as api from '../services/index';
 
 // Types
 import {
