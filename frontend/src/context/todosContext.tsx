@@ -27,7 +27,6 @@ export const TodoProvider = ({ children }: { children: React.ReactNode }) => {
 
 	useEffect(() => {
 		refreshItems();
-		console.log("Refreshed")
 	}, []);
 
 	async function addTodoList({ name }: { name: string }) {
