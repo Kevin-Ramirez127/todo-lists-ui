@@ -1,11 +1,11 @@
 // Types
-import { InputCheckboxProps } from '../../../types/Input';
+import { InputProps } from '../../../types/Input';
 
-function Input({ ...rest }: InputCheckboxProps) {
+function Input({ ...rest }: InputProps) {
 	return <input className='' {...rest} />;
 }
 
-Input.CheckBox = ({ checked, ...rest }: InputCheckboxProps) => {
+Input.CheckBox = ({ checked, ...rest }: InputProps) => {
 	return (
 		<>
 			<label className="flex items-center h-10 px-2 rounded cursor-pointer hover:bg-gray-400">

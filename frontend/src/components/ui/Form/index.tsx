@@ -1,13 +1,5 @@
-// Libraries
-import { ReactNode, FormEventHandler } from 'react';
-
 // Types
-import { FormInputProps } from '../../../types/From';
-
-interface FormProps {
-	onSubmit: FormEventHandler<HTMLFormElement>;
-	children: ReactNode;
-}
+import { FormInputProps, FormProps } from '../../../types/From';
 
 function Form({ onSubmit, children }: FormProps) {
 	return (
