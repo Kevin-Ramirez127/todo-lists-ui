@@ -58,7 +58,7 @@ function TodoItem(props: TodoItemProps) {
 					checked={check}
 					onChange={checkHandler}
 				/>
-				<label>{name}</label>
+				<label className={`${check && 'line-through'}`}>{name}</label>
 			</div>
 			<span
 				className="cursor-pointer px-2 py-1 rounded-md hover:bg-gray-400 my-auto"
